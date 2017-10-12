@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detecstion" content="telephone=no">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='./css/css.css' rel='stylesheet' />
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+<script src='./js/jquery.js' /></script>
+<script src="js/swiper.min.js"></script>
+<title></title>
+</head>
+<body>
+<div class="wrapper">
+	<div class="head">
+		<div class="left h-prev"><img src="img/prev.png"></div>
+		<div class="left h-mid">我的订单</div>
+		<div class="clear"></div>
+	</div>
+	<div class="box">
+		<div class="box7">
+			<div class="box borderbottom">
+				<div class="left shopname"><p>上海大学店</p><span>2017-03-20 14:00</span></div>
+				<div class="right orderstatus">订单已取消</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box borderbottom">
+				<div class="left orderproduct">摩卡等2件商品</div>
+				<div class="right orderprice">￥58</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box">
+				<div class="right comment">评论</div>
+				<div class="right takecoffee">取咖啡</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="box7">
+			<div class="box borderbottom">
+				<div class="left shopname"><p>上海大学店</p><span>2017-03-20 14:00</span></div>
+				<div class="right orderstatus on2">代付款</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box borderbottom">
+				<div class="left orderproduct">摩卡等2件商品</div>
+				<div class="right orderprice">￥58</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box">
+				<div class="right comment">评论</div>
+				<div class="right takecoffee">取咖啡</div>
+				<div class="right gopay">支付</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mak none">
+	<div class="paysuccess">
+		<div style="text-align: center;font-size: 15px;">选择咖啡机</div>
+		<div class="c-store">
+			<div class="left c-storezi">咖啡机列表</div>
+			<div class="right select">
+				<div class="input">请选择咖啡机</div>
+				<div id="sub">
+					<ul>
+						<li>咖啡机</li>
+						<li>五角场店</li>
+						<li>杨浦咖啡机</li>
+						<li>满100减10</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="knowbut">确定</div>
+	</div>
+</div>
+<div class="makcoffee none">
+	<div class="paysuccess">
+		<div style="text-align: center;font-size: 15px;">未取到的咖啡</div>
+		<div class="c-store">
+			<div class="c-coffee">
+				<div class="left c-store-l">香草拿铁</div>
+				<div class="right c-store-r">取咖啡</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="knowbut">确定</div>
+	</div>
+</div>
+<div class="makcoffee">
+	<div class="paysuccess">
+		<div style="text-align: center;font-size: 15px;">定制口味</div>
+		<div class="makstyle" style="padding: 10% 5%;">
+			<div class="box coffee" style="padding-top: 2%;">
+				<div class="left box1">咖啡</div>
+				<div class="left box2">0</div>
+				<div class="left box2 on1">1</div>
+				<div class="left box2">2</div>
+				<div class="left box2">3</div>
+				<div class="left box2">4</div>
+				<div class="left box2">5</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box" style="padding-top: 2%;">
+				<div class="left box1">糖</div>
+				<div class="left box2">0</div>
+				<div class="left box2 on1">1</div>
+				<div class="left box2">2</div>
+				<div class="left box2">3</div>
+				<div class="left box2">4</div>
+				<div class="left box2">5</div>
+				<div class="clear"></div>
+			</div>
+			<div class="box" style="padding-top: 2%;">
+				<div class="left box1">牛奶</div>
+				<div class="left box2">0</div>
+				<div class="left box2 on1">1</div>
+				<div class="left box2">2</div>
+				<div class="left box2">3</div>
+				<div class="left box2">4</div>
+				<div class="left box2">5</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="knowbut">确定</div>
+	</div>
+</div>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('.input').click(function () {
+                $(this).next('#sub').show();
+                $('#sub li').click(function () {
+                    $('.input').html($(this).text());
+                    $('#sub').hide();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+//jsp 删掉的
+<div class="mak none">
+	<div class="paysuccess">
+		<div style="text-align: center;font-size: 15px;">选择咖啡机</div>
+		<div class="c-store">
+			<div class="select">
+				${a51100Form.requestValue }
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="knowbut" onclick="takecafe()">确定</div>
+	</div>
+</div>
+<div class="makcafechoose none">
+	<div class="paysuccess">
+		<div style="text-align: center;font-size: 15px;">选择咖啡机</div>
+		<div class="c-store">
+			<div class="select">
+				${a51100Form.requestValue }
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="knowbut" onclick="showmakcafe()">确定</div>
+	</div>
+</div>
+<div class="makcoffee none">
+	<div class="paysuccess">
+		<div style="text-align: center;font-size: 15px;">未取到的咖啡</div>
+		<div class="c-store">
+			
+		</div>
+		<div class="knowbut" onclick="hidemakcafe()">确定</div>
+	</div>
+</div>
+	StringBuffer sbA51600List = new StringBuffer();
+		A51600Form a51600Form = new A51600Form();
+		List<A51600Form> a516list = a51600Service.getALLList(a51600Form, userCommon);
+		if(a516list!= null){
+			A51600Form a51600Value = a51600Service.getFormByID(a51100Value.getC_A51600_C_ID(), userCommon);
+			if(a51600Value!=null){
+				sbA51600List.append("<div class='input' id='"+a51600Value.getC_VOUCHERID()+"'>"+StringUtils.validateString(a51600Value.getC_NAME())+"</div>");
+			}else{
+				sbA51600List.append("<div class='input'>$nbsp;</div>");
+			}
+			sbA51600List.append("<div class='sub'>");
+			sbA51600List.append("<ul>");
+			for(A51600Form a516value : a516list){
+				sbA51600List.append("<li id='"+a516value.getC_VOUCHERID()+"'>"+StringUtils.validateString(a516value.getC_NAME())+"</option>");
+			}
+			sbA51600List.append("</ul>");
+			sbA51600List.append("</div>");
+		}
+		mainForm.setRequestValue(sbA51600List.toString());
+
+			$(document).ready(function () {
+            $('.makcafechoose .input').click(function () {
+                $(this).next('.sub').show();
+                $('.makcafechoose .sub li').click(function () {
+                    $('.makcafechoose .input').html($(this).text());
+                     $('.makcafechoose .input').attr("id",$(this).attr("id"));
+                     //console.log($(this).attr("id"));
+                    $('.makcafechoose .sub').hide();
+                });
+            });
+            $('.mak .input').click(function () {
+                $(this).next('.sub').show();
+                $('.mak .sub li').click(function () {
+                    $('.mak .input').html($(this).text());
+                     $('.mak .input').attr("id",$(this).attr("id"));
+                     //console.log($(this).attr("id"));
+                    $('.mak .sub').hide();
+                });
+            });
+        });
+
+         function showcafechoose(id){
+     	$(".makcafechoose").removeClass("none");
+     	$("#C_A52500_C_ID").val(id);
+     }
+
+         function showmakcafe(){
+    	$.ajax({
+			url : './th_getOrderDetailList.bk',
+			type : "post",
+			dataType : "json",
+			//timeout: "10000",
+			data : {
+				'C_A52500_C_ID': $("#C_A52500_C_ID").val()
+			},
+			success : function(data) {
+				$(".makcafechoose").addClass("none");
+    			$("#C_A51600_C_VOUCHERID").val($(".makcafechoose .select .input").attr("id"));
+    			$(".makcoffee").removeClass("none");
+    			$(".makcoffee .c-store").html(data.requestValue);
+			},
+			error : function() {
+				getAlert("服务器繁忙，请稍候再试！");
+			}
+		});	
+    }
+    function hidemakcafe(){
+    	$(".makcoffee").addClass("none");
+    	getorder();
+    }
+
+        //部分取
+    function takecafe1(id){
+		$.ajax({
+			url : './th_takecafe1.bk',
+			type : "post",
+			dataType : "json",
+			//timeout: "10000",
+			data : {
+				'C_A52600_C_ID': id,'C_A51600_C_VOUCHERID': $("#C_A51600_C_VOUCHERID").val()
+			},
+			success : function(data) {
+				if(data.requestResult){
+					getAlert("取咖啡成功请等待");
+					showmakcafe();
+				}else{
+					getAlert("取咖啡失败");
+				}
+				//console.log(data);
+			},
+			error : function() {
+				getAlert("服务器繁忙，请稍候再试！");
+			}
+		});	
+	}
+
+		// 订单页面部分咖啡下发
+	@ResponseBody
+	@RequestMapping("/weixin/thcoffee/th_takecafe1")
+	public String takecafe1(A52500Form mainForm, HttpServletResponse response,
+			HttpSession httpSession) {
+		try {
+			UserCommon userCommon = getLeadIdAndSocialMediaID(request,
+					httpSession);
+			String a526id = request.getParameter("C_A52600_C_ID");
+			String strvmc_no = request.getParameter("C_A51600_C_VOUCHERID");
+			String USERNAME = "hongtihu";
+			String PASSWORD = "123456";
+			String cmd = "qrproduct";
+			// a516.c_voucherid
+			int vmc_no = Integer.parseInt(strvmc_no);
+			// a526.c_id
+			String cardcode = a526id;
+			// a524.c_voucherid
+			int product_id = 0;
+			// "fastcode":888,第一位为主原料(咖啡豆)的浓度，0—5浓度依次增加；第二位为白度即牛奶的浓度，从0—5浓度依次增加，第三位为甜度（糖），0—5浓度依次增加
+			String fastcode = "430";
+			MobilePRWebService pr = new MobilePRWebService();
+			HashMap<String, String> Map = new HashMap<String, String>();
+			A52600Form a526Value = a52600Service.getFormByID(a526id, userCommon);
+			if (a526Value != null) {
+					A52400Form a524Value = a52400Service.getFormByID(a526Value
+							.getC_A52400_C_ID(), userCommon);
+					if(a524Value!=null){
+						product_id = Integer.parseInt(a524Value.getC_VOUCHERID());
+					}
+					if (!StringUtils.isValidateString(a526Value
+							.getC_CUSTOMFIELD2())) {
+						a526Value.setC_CUSTOMFIELD2("0");
+					}
+					if (!StringUtils.isValidateString(a526Value
+							.getC_CUSTOMFIELD1())) {
+						a526Value.setC_CUSTOMFIELD1("0");
+					}
+					if (!StringUtils.isValidateString(a526Value
+							.getC_CUSTOMFIELD3())) {
+						a526Value.setC_CUSTOMFIELD3("0");
+					}
+					 fastcode = a526Value.getC_CUSTOMFIELD3()+a526Value.getC_CUSTOMFIELD2()+a526Value.getC_CUSTOMFIELD1();
+					Map = pr.sendPRCoffee(USERNAME, PASSWORD, cmd, vmc_no,
+							cardcode, product_id, fastcode, null);
+					if (Map.get("CODE") == "200") {
+						a526Value
+								.setC_SENDSTATUS_DD_ID("A52600_C_SENDSTATUS_0001");
+						a526Value.setC_SENDSTATUS_DD_NAME("下发成功");
+						a526Value.setD_SEND_TIME(DateUtils
+								.getCurLongDateTimestamp());
+						a526Value.setX_SENDMESSAGE(Map.get("CONTENT"));
+						a52600Service.update(a526Value, userCommon);
+						mainForm.setRequestResult(true);
+					} else {
+						a526Value
+								.setC_SENDSTATUS_DD_ID("A52600_C_SENDSTATUS_0002");
+						a526Value.setC_SENDSTATUS_DD_NAME("下发失败");
+						a526Value.setD_SEND_TIME(DateUtils
+								.getCurLongDateTimestamp());
+						a526Value.setX_SENDMESSAGE(Map.get("CONTENT"));
+						a52600Service.update(a526Value, userCommon);
+						mainForm.setRequestResult(false);
+					}
+				}
+		} catch (Exception e) {
+			e.printStackTrace();
+			mainForm.setRequestResult(false);
+		}
+		return gsonUtils.getGson().toJson(mainForm);
+	}
+
+
+
+
+	<div class="makoff none">
+		<div class="wrapper">
+			<div class="head">
+				<div class="left h-prev" onclick="hidemakoff()"><img src="img/prev.png"></div>
+				<div class="left h-mid">优惠券</div>
+				<div class="clear"></div>
+			</div>
+			<div class="kqlist">
+			</div>
+		</div>
+</div>
+
+
+var scrollFnNewNum = 0;
+//左右联动方法
+function cofeListMod(){
+	var cofeH = document.documentElement.clientHeight - $('#cofeList').offset().top;
+	var cofeListT = $('#cofeList').offset().top;
+	var classList = $('#classList ul li') ,cofeListMod = $('.cofeListMod');
+	//滑动右边定位左边
+	var n ;//索引值
+	var y = false;
+	var isClick = false;
+	window.onscroll = function () {
+		ifCofeMod();
+    };
+	$('#cofeList').bind({
+		'scroll':function(){
+			if(isClick){
+				isClick = false;
+				return
+			}
+			ifCofeMod();
+			//scrollFn();
+			scrollFnNew();
+		}
+	})
+	function scrollFn(){
+		var h = -1000 , b ,z = 0;//h为标杆不断循环赋值寻找最小值b为当前值z为当前索引
+		scrollT = $('#cofeList').scrollTop();
+		cofeListMod.each(function(e,a){
+			b = $(a).offset().top-cofeH;
+			if(b < 0 && b > h){
+				h = b;
+				z = e;
+			};
+		})
+		if($('.cofeListMod').offset().top < 0 && Math.abs($('.cofeListMod').offset().top) + document.documentElement.clientHeight + $('#cofeList').offset().top + 100 >= $('.cofeListMod').offset().height){
+			z = cofeListMod.length-1;
+		}
+		if(z==n)return;
+		n = z;//右侧索引赋值给左侧
+		classListChange();
+		function classListChange(a){
+			if(a) z = a;
+			classList.removeClass('select')
+			classList.each(function(e,a){
+				$(classList[z]).addClass('select');
+			})
+		}
+	}
+	function scrollFnNew(){
+		var isG = true ,n;
+		cofeListMod.each(function(e,a){
+			if($(a).offset().top - 200 >= 0){
+				if(isG){
+					n = e<=0?e = 0 :e - 1;
+					isG = false;
+				}
+			}else{
+				n = cofeListMod.length - 1;
+			}
+		})
+		if(scrollFnNewNum == n)return;
+		scrollFnNewNum = n;
+		classList.removeClass('select');
+		classList.each(function(e,a){
+			if(e == n)($(a).addClass('select'))
+		})
+	}
+	function ifCofeMod(){
+		if($('#cofeMod').offset().top - document.body.scrollTop <= 0){
+			if(y)return;
+			$('.cofeMod .cofeList').css({
+				'overflow-y':'auto'
+			})
+			$('#classList').bind("touchmove",function(event){event.preventDefault();});
+			y = true;
+		}else{
+			if(!y)return;
+			$('.cofeMod .cofeList').css({
+				'overflow-y':'hidden'
+			})
+			$('#classList').unbind("touchmove");
+			y = false;
+		}
+	}
+	//点击左侧滑动右侧
+	classList.each(function(e ,a){
+		$(a).on('click',function(){
+			isClick = true;
+			classList.removeClass('select');
+			$('#cofeList').scrollTop(0);
+			$('#cofeList').scrollTop($(cofeListMod[e]).offset().top - $('#classList').offset().top)
+			$(this).addClass('select');
+		})
+	})
+}
+
+
+
+public String getProduct(A50200Form mainForm, HttpServletResponse response,
+			HttpSession httpSession) throws Exception {
+		UserCommon userCommon = getLeadIdAndSocialMediaID(request, httpSession);
+		// 商品列表
+		StringBuffer sbA523List = new StringBuffer();
+		A52300Form a523form = new A52300Form();
+		a523form.setC_A52200_C_ID(request.getParameter("C_A52200_C_ID"));
+		List<A52300Form> a523List = a52300Service.getListByA522id(a523form,
+				userCommon);
+		for (A52300Form a52300Value : a523List) {
+			A52400Form bValue = a52400Service.getFormByID(a52300Value
+					.getC_A52400_C_ID(), userCommon);
+			sbA523List
+					.append("<div class='box borderbottom' style='padding: 5% 0 0 0;' onclick=\"toProduct('"
+							+ bValue.getC_ID() + "')\">");
+			sbA523List.append("<div class='left p-list-img'>");
+			sbA523List.append("<img src='../.././web/./"
+					+ bValue.getC_SMALLPICTURE() + "'>");
+			sbA523List.append("</div>");
+			sbA523List.append("<div class='left p-list-xx'>");
+			sbA523List.append("<p>"
+					+ StringUtils.validateString(bValue.getC_NAME()) + "</p>");
+			sbA523List.append("<span>");
+			if(StringUtils.isValidateString(bValue.getC_ENGLISHNAME())){
+				sbA523List.append(bValue.getC_ENGLISHNAME());
+			}else{
+				sbA523List.append("&nbsp;");
+			}
+			sbA523List.append("</span>");
+			sbA523List.append("<div class='box'>");
+			sbA523List.append("<div class='left p-list-price'>￥"
+					+ bValue.getB_SELLPRICE().toString().substring(0,
+							bValue.getB_SELLPRICE().toString().length() - 3)
+					+ "</div>");
+			sbA523List.append("<div class='clear'></div>");
+			sbA523List.append("</div>");
+			sbA523List.append("</div>");
+			sbA523List.append("<div class='clear'></div>");
+			sbA523List.append("</div>");
+		}
+		return gsonUtils.getGson().toJson(sbA523List.toString());
+	}

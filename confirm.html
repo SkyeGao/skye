@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detecstion" content="telephone=no">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='./css/css.css' rel='stylesheet' />
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+<link  href="font-awesome/css/font-awesome.css" rel='stylesheet' />
+<script src='./js/jquery.js' /></script>
+<script src="js/swiper.min.js"></script>
+<title></title>
+</head>
+<body>
+<div class="wrapper">
+	<div class="head">
+		<div class="left h-prev" onclick="history.back(-1)"><img src="img/prev.png"></div>
+		<div class="left h-mid">订单确认(上海大学)</div>
+		<div class="clear"></div>
+	</div>
+	<div class="box3" style="margin: 0;">
+		<div class="box borderbottom" style="padding: 5px 0;">
+			<div class="left makcarboxzi"><p>卡布奇诺</p><span>CAPPUCCINO</span></div>
+			<div class="right makcarnum">
+				<span class="left zi" style="line-height: 40px;font-size: 15px;color: #d7001d;">￥29</span>
+				<span class="right plus"><img src="img/plus.png"></span><span class="right num">1</span><span class="right minus"><img src="img/minus.png"></span>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="box borderbottom" style="padding: 5px 0;">
+			<div class="left makcarboxzi"><p>卡布奇诺</p><span>CAPPUCCINO</span></div>
+			<div class="right makcarnum">
+				<span class="left zi" style="line-height: 40px;font-size: 15px;color: #d7001d;">￥29</span>
+				<span class="right plus"><img src="img/plus.png"></span><span class="right num">1</span><span class="right minus"><img src="img/minus.png"></span>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="box4">
+			<p>优惠活动: 买一送一<span>送2杯</span></p>
+			<div class="clear"></div>
+		</div>
+		<div class="c-store">
+			<div class="left c-storezi">优惠券</div>
+			<div class="right c-storeselect">
+				<span>点击使用优惠券 <i class="fa fa-angle-right"></i></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="c-store" id="c-store1">
+			<div class="left c-storezi">优惠券</div>
+			<div class="right c-storeselect">
+				<span>咖啡机 <i class="fa fa-angle-right"></i></span>
+				<select id="c-select1" onchange="selonchange('c-store1','c-select1')">
+					<option selected>咖啡机</option>
+					<option>五角场店</option>
+					<option>杨浦咖啡机</option>
+					<option>满100减10</option>
+				</select>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="box5">
+			<p>注: 优惠活动与优惠券不同享<span>实付: ￥58</span></p>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="left car-shifu">实付款：￥58</div>
+		<div class="right car-qrzf">确认支付</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="mak none">
+	<div class="paysuccess">
+		<div class="gou"><img src="img/gou.png"><span>购买成功</span><div class="clear"></div></div>
+		<div class="method borderbottom">
+			<p>怎么取咖啡？</p>
+			<p>方法一：<ins onclick="showhelp()">扫码去咖啡</ins>;</p>
+			<p>方法二：使用兑换码取咖啡，兑换码：888888888;</p>
+		</div>
+		<p style="text-align: center;line-height: 40px;"><ins>查看详情介绍</ins></p>
+		<div class="knowbut">我知道了</div>
+	</div>
+</div>
+<div class="help none" onclick="hidehelp()">
+	<div class="head">
+		<div class="left h-prev"><img src="img/prev.png"></div>
+		<div class="left h-mid">微信扫码去咖啡</div>
+		<div class="clear"></div>
+	</div>
+	<div class="helpimg">
+		<img src="img/help.jpg" />
+	</div>
+</div>
+<div class="mak inggif">
+	<div class="gif">
+		<img src="img/timg.gif" />
+	</div>
+</div>
+<script type="text/javascript">
+	function $1(x){
+	  return document.getElementById(x);
+	 }
+	function selonchange(x,y){
+		  var wrap=$1(x);
+		  var result=wrap.getElementsByTagName("span");
+		  var sel=$1(y);
+		  var opt=sel.getElementsByTagName("option");
+		  var len=opt.length;
+	  	for(i=0;i<len;i++){
+		   if(opt[i].selected==true){
+		    	x=opt[i].innerHTML;
+		    	//console.log(opt[i].innerHTML);
+		   }
+
+	  	}
+	  result[0].innerHTML=x;
+	 }
+	 function getInfo(){
+		var lbody=document.body.clientHeight;
+		var lbg=lbody-50;
+		$(".helpimg img").css("height",lbg);
+		//alert(lbody+"   "+lbg);
+		}
+	getInfo();
+	function hidehelp(){
+		$(".help").addClass("none");
+	}
+	function showhelp(){
+		$(".help").removeClass("none");
+	}
+</script>
+</body>
+</html>
